@@ -1,0 +1,175 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="User.master.cs" Inherits="CarRental.User.User" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Car Rental</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../UserTemplate/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="../UserTemplate/css/animate.css">
+
+    <link rel="stylesheet" href="../UserTemplate/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../UserTemplate/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../UserTemplate/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="../UserTemplate/css/aos.css">
+
+    <link rel="stylesheet" href="../UserTemplate/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="../UserTemplate/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="../UserTemplate/css/jquery.timepicker.css">
+
+    <link rel="stylesheet" href="../UserTemplate/css/flaticon.css">
+    <link rel="stylesheet" href="../UserTemplate/css/icomoon.css">
+    <link rel="stylesheet" href="../UserTemplate/css/style.css">
+
+    <script src="../UserTemplate/js/jquery.min.js"></script>
+    <script>
+        $(function () {
+            // this will get the full URL at the address bar
+            var url = window.location.href;
+
+            // passes on every "a" tag 
+            $("#ftco-nav a").each(function () {
+                // checks if its the same on the address bar
+                if (url == (this.href)) {
+                    $(this).closest("li").addClass("active");
+                }
+            });
+
+        });
+    </script>
+
+    <script type ="text/javascript">  
+        window.onload = window.history.forward(0);
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <!-- START nav -->
+        <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Car<span>Rental</span></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="oi oi-menu"></span>Menu
+	     
+                </button>
+
+                <div class="collapse navbar-collapse" id="ftco-nav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a href="Default.aspx" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="About.aspx" class="nav-link">About</a></li>
+                        <%--<li class="nav-item"><a href="Pricing.aspx" class="nav-link">Pricing</a></li>--%>
+                        <li class="nav-item"><a href="Cars.aspx" class="nav-link">Cars</a></li>
+                        <li class="nav-item"><a href="Contact.aspx" class="nav-link">Contact</a></li>
+                        <li class="nav-item">
+                            <%--<a href="Contact.aspx" class="btn btn-outline-info my-2 mr-2">Contact</a>--%>
+                            <asp:LinkButton ID="lbRegisterOrProfile" runat="server" CssClass="btn btn-info my-2 mr-2" CausesValidation="false"
+                                OnClick="lbRegisterOrProfile_Click"></asp:LinkButton>
+                        </li>
+                        <li class="nav-item">
+                            <%--<a href="Contact.aspx" class="btn btn-info my-2">Contact</a>--%>
+                            <asp:LinkButton ID="lbLoginOrLogout" runat="server" CssClass="btn btn-info my-2" CausesValidation="false"
+                                OnClick="lbLoginOrLogout_Click"></asp:LinkButton>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- END nav -->
+
+        
+
+
+
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <!-- START Footer -->
+        <footer class="ftco-footer ftco-bg-dark ftco-section">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-md">
+                        <div class="ftco-footer-widget mb-4">
+                            <h2 class="ftco-heading-2"><a href="#" class="logo">Car<span>book</span></a></h2>
+                            <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="ftco-footer-widget mb-4 ml-md-5">
+                            <h2 class="ftco-heading-2">Information</h2>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="Info">About</a></li>
+                                <li><a href="#" class="Info">Services</a></li>
+                                <li><a href="#" class="Info">Term and Conditions</a></li>
+                                <li><a href="#" class="Info">Privacy &amp; Cookies Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="ftco-footer-widget mb-4">
+                            <h2 class="ftco-heading-2">Customer Support</h2>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="Info">FAQ</a></li>
+                                <li><a href="#" class="Info">Booking Tips</a></li>
+                                <li><a href="#" class="Info">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="ftco-footer-widget mb-4">
+                            <h2 class="ftco-heading-2">Have a Questions?</h2>
+                            <div class="block-23 mb-3">
+                                <ul>
+                                    <li><span class="icon icon-map-marker"></span><span class="text">Hyderabad, Telangana</span></li>
+                                    <li><a href="#"><span class="icon icon-phone"></span><span class="text">+91 7036507016</span></a></li>
+                                    <li><a href="#"><span class="icon icon-envelope"></span><span class="text">harijatavath9949@gmail.com</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- END Footer -->
+
+
+       
+
+    </form>
+
+
+    <%--<script src="../UserTemplate/js/jquery.min.js"></script>--%>
+    <script src="../UserTemplate/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="../UserTemplate/js/popper.min.js"></script>
+    <script src="../UserTemplate/js/bootstrap.min.js"></script>
+    <script src="../UserTemplate/js/jquery.easing.1.3.js"></script>
+    <script src="../UserTemplate/js/jquery.waypoints.min.js"></script>
+    <script src="../UserTemplate/js/jquery.stellar.min.js"></script>
+    <script src="../UserTemplate/js/owl.carousel.min.js"></script>
+    <script src="../UserTemplate/js/jquery.magnific-popup.min.js"></script>
+    <script src="../UserTemplate/js/aos.js"></script>
+    <script src="../UserTemplate/js/jquery.animateNumber.min.js"></script>
+    <script src="../UserTemplate/js/bootstrap-datepicker.js"></script>
+    <script src="../UserTemplate/js/jquery.timepicker.min.js"></script>
+    <script src="../UserTemplate/js/scrollax.min.js"></script>
+    <%--<script src="../https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="../UserTemplate/js/google-map.js"></script>--%>
+    <script src="../UserTemplate/js/main.js"></script>
+
+</body>
+</html>

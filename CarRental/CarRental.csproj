@@ -1,0 +1,668 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DCE91BF0-F492-4F8A-9FCE-0CE3E8EAD188}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CarRental</RootNamespace>
+    <AssemblyName>CarRental</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.4.1\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.4.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminTemplate\assets\css\dataTables.bootstrap4.min.css" />
+    <Content Include="AdminTemplate\assets\css\material-dashboard-rtl.css" />
+    <Content Include="AdminTemplate\assets\css\material-dashboard.css" />
+    <Content Include="AdminTemplate\assets\css\material-dashboard.min.css" />
+    <Content Include="AdminTemplate\assets\css\sweetalert.css" />
+    <Content Include="AdminTemplate\assets\demo\demo.css" />
+    <Content Include="AdminTemplate\assets\demo\demo.js" />
+    <Content Include="AdminTemplate\assets\img\apple-icon.png" />
+    <Content Include="AdminTemplate\assets\img\bg2.jpg" />
+    <Content Include="AdminTemplate\assets\img\city-profile.jpg" />
+    <Content Include="AdminTemplate\assets\img\city.jpg" />
+    <Content Include="AdminTemplate\assets\img\cover.jpg" />
+    <Content Include="AdminTemplate\assets\img\faces\avatar.jpg" />
+    <Content Include="AdminTemplate\assets\img\faces\card-profile1-square.jpg" />
+    <Content Include="AdminTemplate\assets\img\faces\card-profile2-square.jpg" />
+    <Content Include="AdminTemplate\assets\img\faces\marc.jpg" />
+    <Content Include="AdminTemplate\assets\img\favicon.png" />
+    <Content Include="AdminTemplate\assets\img\mask.png" />
+    <Content Include="AdminTemplate\assets\img\new_logo.png" />
+    <Content Include="AdminTemplate\assets\img\sidebar-1.jpg" />
+    <Content Include="AdminTemplate\assets\img\sidebar-2.jpg" />
+    <Content Include="AdminTemplate\assets\img\sidebar-3.jpg" />
+    <Content Include="AdminTemplate\assets\img\sidebar-4.jpg" />
+    <Content Include="AdminTemplate\assets\js\buttons.bootstrap4.min.js" />
+    <Content Include="AdminTemplate\assets\js\core\bootstrap-material-design.min.js" />
+    <Content Include="AdminTemplate\assets\js\core\jquery.min.js" />
+    <Content Include="AdminTemplate\assets\js\core\popper.min.js" />
+    <Content Include="AdminTemplate\assets\js\datatable-setting.js" />
+    <Content Include="AdminTemplate\assets\js\dataTables.bootstrap4.min.js" />
+    <Content Include="AdminTemplate\assets\js\dataTables.buttons.min.js" />
+    <Content Include="AdminTemplate\assets\js\dataTables.responsive.min.js" />
+    <Content Include="AdminTemplate\assets\js\jquery.dataTables.min.js" />
+    <Content Include="AdminTemplate\assets\js\jquery.min.js" />
+    <Content Include="AdminTemplate\assets\js\material-dashboard.js" />
+    <Content Include="AdminTemplate\assets\js\material-dashboard.min.js" />
+    <Content Include="AdminTemplate\assets\js\plugins\arrive.min.js" />
+    <Content Include="AdminTemplate\assets\js\plugins\bootstrap-datetimepicker.min.js" />
+    <Content Include="AdminTemplate\assets\js\plugins\bootstrap-notify.js" />
+    <Content Include="AdminTemplate\assets\js\plugins\bootstrap-selectpicker.js" />
+    <Content Include="AdminTemplate\assets\js\plugins\bootstrap-tagsinput.js" />
+    <Content Include="AdminTemplate\assets\js\plugins\chartist.min.js" />
+    <Content Include="AdminTemplate\assets\js\plugins\fullcalendar.min.js" />
+    <Content Include="AdminTemplate\assets\js\plugins\jasny-bootstrap.min.js" />
+    <Content Include="AdminTemplate\assets\js\plugins\jquery-jvectormap.js" />
+    <Content Include="AdminTemplate\assets\js\plugins\jquery.bootstrap-wizard.js" />
+    <Content Include="AdminTemplate\assets\js\plugins\jquery.dataTables.min.js" />
+    <Content Include="AdminTemplate\assets\js\plugins\jquery.tagsinput.js" />
+    <Content Include="AdminTemplate\assets\js\plugins\jquery.validate.min.js" />
+    <Content Include="AdminTemplate\assets\js\plugins\moment.min.js" />
+    <Content Include="AdminTemplate\assets\js\plugins\nouislider.min.js" />
+    <Content Include="AdminTemplate\assets\js\plugins\perfect-scrollbar.jquery.min.js" />
+    <Content Include="AdminTemplate\assets\js\plugins\sweetalert2.js" />
+    <Content Include="AdminTemplate\assets\js\responsive.bootstrap4.min.js" />
+    <Content Include="AdminTemplate\assets\js\sweetalert-dev.js" />
+    <Content Include="AdminTemplate\assets\js\sweetalert.min.js" />
+    <Content Include="Admin\Bookings.aspx" />
+    <Content Include="Admin\Brand.aspx" />
+    <Content Include="Admin\Contacts.aspx" />
+    <Content Include="Admin\Dashboard.aspx" />
+    <Content Include="Admin\Users.aspx" />
+    <Content Include="Admin\Vehicle.aspx" />
+    <Content Include="Admin\VehicleList.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\No_image.png" />
+    <Content Include="UserTemplate\css\ajax-loader.gif" />
+    <Content Include="UserTemplate\css\animate.css" />
+    <Content Include="UserTemplate\css\aos.css" />
+    <Content Include="UserTemplate\css\bootstrap-datepicker.css" />
+    <Content Include="UserTemplate\css\bootstrap.min.css" />
+    <Content Include="UserTemplate\css\bootstrap\bootstrap-grid.css" />
+    <Content Include="UserTemplate\css\bootstrap\bootstrap-reboot.css" />
+    <Content Include="UserTemplate\css\css\bootstrap-reboot.css" />
+    <Content Include="UserTemplate\css\css\mixins\_text-hide.css" />
+    <Content Include="UserTemplate\css\css\Payment.css" />
+    <Content Include="UserTemplate\css\css\UserProfile.css" />
+    <Content Include="UserTemplate\css\flaticon.css" />
+    <Content Include="UserTemplate\css\icomoon.css" />
+    <Content Include="UserTemplate\css\ionicons.min.css" />
+    <Content Include="UserTemplate\css\jquery.timepicker.css" />
+    <Content Include="UserTemplate\css\magnific-popup.css" />
+    <Content Include="UserTemplate\css\open-iconic-bootstrap.min.css" />
+    <Content Include="UserTemplate\css\owl.carousel.min.css" />
+    <Content Include="UserTemplate\css\owl.theme.default.min.css" />
+    <Content Include="UserTemplate\css\style.css" />
+    <Content Include="UserTemplate\fonts\flaticon\backup.txt" />
+    <Content Include="UserTemplate\fonts\flaticon\font\flaticon.css" />
+    <Content Include="UserTemplate\fonts\flaticon\font\flaticon.html" />
+    <Content Include="UserTemplate\fonts\flaticon\font\Flaticon.svg" />
+    <Content Include="UserTemplate\fonts\icomoon\icomoon.svg" />
+    <Content Include="UserTemplate\fonts\ionicons\css\ionicons.min.css" />
+    <Content Include="UserTemplate\fonts\ionicons\fonts\ionicons.svg" />
+    <Content Include="UserTemplate\fonts\open-iconic\open-iconic.svg" />
+    <Content Include="UserTemplate\images\about.jpg" />
+    <Content Include="UserTemplate\images\bg_1.jpg" />
+    <Content Include="UserTemplate\images\bg_2.jpg" />
+    <Content Include="UserTemplate\images\bg_3.jpg" />
+    <Content Include="UserTemplate\images\car-1.jpg" />
+    <Content Include="UserTemplate\images\car-10.jpg" />
+    <Content Include="UserTemplate\images\car-11.jpg" />
+    <Content Include="UserTemplate\images\car-12.jpg" />
+    <Content Include="UserTemplate\images\car-2.jpg" />
+    <Content Include="UserTemplate\images\car-3.jpg" />
+    <Content Include="UserTemplate\images\car-4.jpg" />
+    <Content Include="UserTemplate\images\car-5.jpg" />
+    <Content Include="UserTemplate\images\car-6.jpg" />
+    <Content Include="UserTemplate\images\car-7.jpg" />
+    <Content Include="UserTemplate\images\car-8.jpg" />
+    <Content Include="UserTemplate\images\car-9.jpg" />
+    <Content Include="UserTemplate\images\image_1.jpg" />
+    <Content Include="UserTemplate\images\image_2.jpg" />
+    <Content Include="UserTemplate\images\image_3.jpg" />
+    <Content Include="UserTemplate\images\image_4.jpg" />
+    <Content Include="UserTemplate\images\image_5.jpg" />
+    <Content Include="UserTemplate\images\image_6.jpg" />
+    <Content Include="UserTemplate\images\loc.png" />
+    <Content Include="UserTemplate\images\person_1.jpg" />
+    <Content Include="UserTemplate\images\person_2.jpg" />
+    <Content Include="UserTemplate\images\person_3.jpg" />
+    <Content Include="UserTemplate\images\person_4.jpg" />
+    <Content Include="UserTemplate\js\aos.js" />
+    <Content Include="UserTemplate\js\bootstrap-datepicker.js" />
+    <Content Include="UserTemplate\js\bootstrap.min.js" />
+    <Content Include="UserTemplate\js\google-map.js" />
+    <Content Include="UserTemplate\js\jquery-3.2.1.min.js" />
+    <Content Include="UserTemplate\js\jquery-migrate-3.0.1.min.js" />
+    <Content Include="UserTemplate\js\jquery.animateNumber.min.js" />
+    <Content Include="UserTemplate\js\jquery.easing.1.3.js" />
+    <Content Include="UserTemplate\js\jquery.magnific-popup.min.js" />
+    <Content Include="UserTemplate\js\jquery.min.js" />
+    <Content Include="UserTemplate\js\jquery.stellar.min.js" />
+    <Content Include="UserTemplate\js\jquery.timepicker.min.js" />
+    <Content Include="UserTemplate\js\jquery.waypoints.min.js" />
+    <Content Include="UserTemplate\js\main.js" />
+    <Content Include="UserTemplate\js\owl.carousel.min.js" />
+    <Content Include="UserTemplate\js\popper.min.js" />
+    <Content Include="UserTemplate\js\range.js" />
+    <Content Include="UserTemplate\js\scrollax.min.js" />
+    <Content Include="User\About.aspx" />
+    <Content Include="User\CarBooking.aspx" />
+    <Content Include="User\CarDetails.aspx" />
+    <Content Include="User\Cars.aspx" />
+    <Content Include="User\ChangePassword.aspx" />
+    <Content Include="User\Contact.aspx" />
+    <Content Include="User\Default.aspx" />
+    <Content Include="User\Login.aspx" />
+    <Content Include="User\Payment.aspx" />
+    <Content Include="User\Pricing.aspx" />
+    <Content Include="User\Profile.aspx" />
+    <Content Include="User\Registration.aspx" />
+    <Content Include="User\Service.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="User\User.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Bookings.aspx.cs">
+      <DependentUpon>Bookings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Bookings.aspx.designer.cs">
+      <DependentUpon>Bookings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Brand.aspx.cs">
+      <DependentUpon>Brand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Brand.aspx.designer.cs">
+      <DependentUpon>Brand.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Contacts.aspx.cs">
+      <DependentUpon>Contacts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Contacts.aspx.designer.cs">
+      <DependentUpon>Contacts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Vehicle.aspx.cs">
+      <DependentUpon>Vehicle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Vehicle.aspx.designer.cs">
+      <DependentUpon>Vehicle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\VehicleList.aspx.cs">
+      <DependentUpon>VehicleList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\VehicleList.aspx.designer.cs">
+      <DependentUpon>VehicleList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Connection.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\CarBooking.aspx.cs">
+      <DependentUpon>CarBooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\CarBooking.aspx.designer.cs">
+      <DependentUpon>CarBooking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\CarDetails.aspx.cs">
+      <DependentUpon>CarDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\CarDetails.aspx.designer.cs">
+      <DependentUpon>CarDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Cars.aspx.cs">
+      <DependentUpon>Cars.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Cars.aspx.designer.cs">
+      <DependentUpon>Cars.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Payment.aspx.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Payment.aspx.designer.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Pricing.aspx.cs">
+      <DependentUpon>Pricing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Pricing.aspx.designer.cs">
+      <DependentUpon>Pricing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Service.aspx.cs">
+      <DependentUpon>Service.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Service.aspx.designer.cs">
+      <DependentUpon>Service.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\User.Master.cs">
+      <DependentUpon>User.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\User.Master.designer.cs">
+      <DependentUpon>User.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Images\Car\" />
+    <Folder Include="Images\User\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Admin.Master" />
+    <Content Include="AdminTemplate\assets\css\material-dashboard.css.map" />
+    <Content Include="AdminTemplate\assets\js\material-dashboard.js.map" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\bootstrap-grid.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\bootstrap-reboot.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\bootstrap.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\mixins\_alert.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\mixins\_background-variant.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\mixins\_badge.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\mixins\_border-radius.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\mixins\_box-shadow.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\mixins\_breakpoints.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\mixins\_buttons.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\mixins\_caret.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\mixins\_clearfix.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\mixins\_float.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\mixins\_forms.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\mixins\_gradients.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\mixins\_grid-framework.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\mixins\_grid.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\mixins\_hover.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\mixins\_image.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\mixins\_list-group.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\mixins\_lists.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\mixins\_nav-divider.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\mixins\_navbar-align.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\mixins\_pagination.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\mixins\_reset-text.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\mixins\_resize.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\mixins\_screen-reader.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\mixins\_size.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\mixins\_table-row.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\mixins\_text-emphasis.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\mixins\_text-hide.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\mixins\_text-truncate.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\mixins\_transition.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\mixins\_visibility.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\utilities\_align.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\utilities\_background.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\utilities\_borders.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\utilities\_clearfix.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\utilities\_display.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\utilities\_embed.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\utilities\_flex.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\utilities\_float.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\utilities\_position.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\utilities\_screenreaders.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\utilities\_sizing.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\utilities\_spacing.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\utilities\_text.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\utilities\_visibility.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\_alert.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\_badge.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\_breadcrumb.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\_button-group.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\_buttons.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\_card.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\_carousel.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\_close.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\_code.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\_custom-forms.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\_dropdown.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\_forms.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\_functions.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\_grid.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\_images.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\_input-group.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\_jumbotron.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\_list-group.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\_media.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\_mixins.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\_modal.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\_nav.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\_navbar.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\_pagination.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\_popover.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\_print.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\_progress.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\_reboot.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\_root.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\_tables.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\_tooltip.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\_transitions.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\_type.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\_utilities.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\bootstrap\scss\_variables.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\cards\_card-plain.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\cards\_card-profile.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\cards\_card-stats.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\mixins\_alert.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\mixins\_animations.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\mixins\_breakpoints.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\mixins\_buttons.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\mixins\_chartist.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\mixins\_colored-shadows.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\mixins\_drawer.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\mixins\_forms.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\mixins\_hover.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\mixins\_layout.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\mixins\_navbar-colors.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\mixins\_navs.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\mixins\_sidebar-color.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\mixins\_transparency.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\mixins\_type.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\mixins\_utilities.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\mixins\_variables.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\mixins\_vendor-prefixes.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\plugins\_animate.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\plugins\_chartist.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\plugins\_perfect-scrollbar.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\variables\_body.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\variables\_bootstrap-material-design-base.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\variables\_bootstrap-material-design.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\variables\_brand.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\variables\_buttons.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\variables\_card.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\variables\_code.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\variables\_colors-map.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\variables\_colors.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\variables\_custom-forms.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\variables\_drawer.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\variables\_dropdown.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\variables\_forms.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\variables\_layout.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\variables\_list-group.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\variables\_menu.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\variables\_modals.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\variables\_nav.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\variables\_pagination.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\variables\_shadow.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\variables\_snackbar.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\variables\_spacing.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\variables\_state.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\variables\_tables.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\variables\_tooltip.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\variables\_type.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\_alerts.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\_buttons.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\_cards.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\_checkboxes.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\_core-bootstrap.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\_dropdown.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\_example-pages.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\_fixed-plugin.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\_footers.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\_forms.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\_headers.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\_images.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\_info-areas.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\_input-group.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\_misc.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\_mixins.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\_navbar.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\_popover.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\_popups.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\_radios.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\_responsive.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\_ripples.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\_sidebar-and-main-panel.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\_social-buttons.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\_tables.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\_tabs.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\_togglebutton.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\_tooltip.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\_type.scss" />
+    <Content Include="AdminTemplate\assets\scss\material-dashboard\_variables.scss" />
+    <None Include="packages.config" />
+    <Content Include="UserTemplate\css\.DS_Store" />
+    <Content Include="UserTemplate\css\bootstrap\.DS_Store" />
+    <Content Include="UserTemplate\css\css\.DS_Store" />
+    <Content Include="UserTemplate\fonts\.DS_Store" />
+    <Content Include="UserTemplate\fonts\flaticon\.DS_Store" />
+    <Content Include="UserTemplate\fonts\flaticon\font\.DS_Store" />
+    <Content Include="UserTemplate\fonts\flaticon\font\Flaticon.eot" />
+    <Content Include="UserTemplate\fonts\flaticon\font\Flaticon.ttf" />
+    <Content Include="UserTemplate\fonts\flaticon\font\Flaticon.woff" />
+    <Content Include="UserTemplate\fonts\flaticon\font\Flaticon.woff2" />
+    <Content Include="UserTemplate\fonts\flaticon\font\_flaticon.scss" />
+    <Content Include="UserTemplate\fonts\flaticon\license\license.pdf" />
+    <Content Include="UserTemplate\fonts\icomoon\icomoon.eot" />
+    <Content Include="UserTemplate\fonts\icomoon\icomoon.ttf" />
+    <Content Include="UserTemplate\fonts\icomoon\icomoon.woff" />
+    <Content Include="UserTemplate\fonts\ionicons\css\_ionicons.scss" />
+    <Content Include="UserTemplate\fonts\ionicons\fonts\.DS_Store" />
+    <Content Include="UserTemplate\fonts\ionicons\fonts\ionicons.eot" />
+    <Content Include="UserTemplate\fonts\ionicons\fonts\ionicons.ttf" />
+    <Content Include="UserTemplate\fonts\ionicons\fonts\ionicons.woff" />
+    <Content Include="UserTemplate\fonts\ionicons\fonts\ionicons.woff2" />
+    <Content Include="UserTemplate\fonts\open-iconic\open-iconic.eot" />
+    <Content Include="UserTemplate\fonts\open-iconic\open-iconic.otf" />
+    <Content Include="UserTemplate\fonts\open-iconic\open-iconic.ttf" />
+    <Content Include="UserTemplate\fonts\open-iconic\open-iconic.woff" />
+    <Content Include="UserTemplate\images\.DS_Store" />
+    <Content Include="UserTemplate\js\.DS_Store" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55109</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:55109/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
